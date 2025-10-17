@@ -22,6 +22,10 @@ int main () {
     unsigned long int populacao;
     float area, PIB, densidadepopulacional, superpoder, PIBpercapta;
 
+    // declarando váriavel switch
+
+    int comparandocartas;
+
     // bem vindo
 
     printf("seja bem vindo ao super trunfo, vou te pedir informações sobre as 2 cartas\n");
@@ -177,6 +181,86 @@ int main () {
             printf("Super poder: carta 1 venceu!\n");
         } else {
             printf("Super poder: carta 2 venceu!\n");
+        }
+    }
+
+    // comparando cartas
+
+    printf("agora vamos comparar as cartas!\n");
+    printf("digite o número que você deseja comparar:\n");
+    printf("1. Carta\n");
+    printf("2. população\n");
+    printf("3. área\n");
+    printf("4. PIB\n");
+    printf("5. número de pontos turísticos\n");
+    printf("6. densidade populacional\n");
+    scanf("%d", &comparandocartas);
+
+    switch (comparandocartas) {
+        case 1:
+        printf("A carta 1 é %s e a carta 2 é %s", carta1, carta2);
+        break;
+        case 2:
+        if (populacao1 > populacao2) {
+            printf("A população da carta 1 é %lu e a da carta 2 é %lu, então a carta %s, venceu a carta %s\n", 
+                populacao1,populacao2, carta1, carta2);
+        } else if (populacao1 < populacao2) {
+            printf("A população da carta 1 é %lu e a da carta 2 é %lu, então a carta %s venceu a carta %s\n", 
+                populacao1, populacao2, carta2, carta1);
+        } else {
+            printf("A população da carta 1 é %lu e a da carta 2 é %lu, então a carta %s, empatou com a carta %s\n", 
+                populacao1, populacao2, carta1, carta2);
+        break;
+        case 3:
+        if (area1 > area2) {
+            printf("A área da carta 1 é %f e a área da carta 2 é %f, então a carta %s venceu a carta %s\n", 
+                area1, area2, carta1, carta2);
+        } else if (area1 < area2) {
+            printf("A área da carta 1 é %f e a área da carta 2 é %f, então a carta %s venceu a carta %s\n", 
+                area1, area2, carta2, carta1);
+        } else {
+            printf("A área da carta 1 é %F e a área da carta 2 é %f, então a carta %s empatou com a carta %s\n", 
+                area1, area2, carta1, carta2);
+        break;
+        case 4:
+        if (PIB1 > PIB2){
+            printf("O PIB da carta 1 é %f e o PIB da carta 2 é %f, então a carta %s venceu a carta %s\n", 
+                PIB1, PIB2, carta1, carta2);
+        } else if (PIB1 < PIB2){
+            printf("O PIB da carta 1 é %f e o PIB da carta 2 é %f, então a carta %s venceu a carta %s\n", 
+                PIB1, PIB2, carta2, carta1);
+        } else {
+            printf("O PIB da carta 1 é %f e o PIB da carta 2 é %f, então a carta %s empatou com a carta %s\n", 
+                PIB1, PIB2, carta1, carta2);
+        break;
+        case 5:
+        if (pontosturisticos1 > pontosturisticos2) {
+            printf("O número de pontos turísticos da carta 1 é %d e o número de pontos turísticos da carta 2 é %d, então a carta %s, venceu a carta %s\n", 
+                pontosturisticos1, pontosturisticos2, carta1, carta2);
+        } else if (pontosturisticos1 < pontosturisticos2) {
+            printf("O número de pontos turísticos da carta 1 é %d e o número de pontos turísticos da carta 2 é %d, então a carta %s venceu a carta %s\n", 
+                pontosturisticos1, pontosturisticos2, carta2, carta1);
+        } else {
+            printf("O número de pontos turísticos da carta 1 é %d e o número de pontos turísticos da carta 2 é %d, então a carta %s empatou com a carta %s\n", 
+                pontosturisticos1, pontosturisticos2, carta1, carta2);
+        break;
+        case 6:
+        if (densidadepopulacional < densidadepopulacional2) {
+            printf("A densidade populacional da carta 1 é %f e a densidade populacional da carta 2 é %f, então a carta %s venceu a carta %s\n", 
+                densidadepopulacional1, densidadepopulacional2, carta1, carta2);
+        } else if (densidadepopulacional1 > densidadepopulacional2) {
+            printf("A densidade populacional da carta 1 é %f e a densidade populacional da carta 2 é %f, então a carta %s venceu a carta %s\n", 
+                densidadepopulacional1, densidadepopulacional2, carta2, carta1);
+        } else {
+            printf("A densidade populacional da carta 1 é %f e a densidade populacional da carta 2 é %f, então a carta %s empatou com a carta %s\n", 
+                densidadepopulacional1, densidadepopulacional2, carta1, carta2);
+        break;
+        default: 
+        printf("erro");    
+        }
+        }        
+        }        
+        }
         }
     }
 
